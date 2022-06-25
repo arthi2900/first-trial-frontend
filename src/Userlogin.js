@@ -29,7 +29,7 @@ export function Login() {
     body:JSON.stringify(addst),
     headers:{
       "content-Type":"application/json",
-     credentials:'include'
+      "Access-Control-Allow-Origin": "*"
     },
     }).then(()=> history.push('/User/:id'));}
 

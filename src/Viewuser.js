@@ -82,7 +82,7 @@ export function Ourpost() {
    const posterdeleteuser=(pid)=>{
     fetch(`${APIposter}/Poster/${pid}`,{
       method:"DELETE",
-    }).then(()=>history.push(`/User/${id}`));
+    }).then(()=>history.push(`/User`));
     };
 
   return (

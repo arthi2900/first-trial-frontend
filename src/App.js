@@ -6,7 +6,7 @@ import { Data} from './Data';
 import { Viewposter } from './Viewposter';
 import { Editposter } from './Editposter';
 import {Addposter } from './Addposter';
-import { Adduser } from './Signup';
+import { Signup} from './Adduser';
 import { Viewuser } from './Viewuser';
 //import {Ourpost } from './Viewuser';
 import { Userdata } from './Userdata';
