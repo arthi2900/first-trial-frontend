@@ -36,10 +36,7 @@ function App() {
                                              </ul>
       <Switch>
        
-    / {//  <Route path="/User/poster/:id"><Ourpost /></Route>}
-}
 
-}
         <Route path=" /User/editposter/:id"><Editposterbyuser/></Route>
         <Route path="/User/edit/:id"><Edituser /></Route>
     <Route path="/User/Adduser"><Adduser/></Route>

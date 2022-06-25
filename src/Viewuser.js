@@ -17,7 +17,7 @@ import { Poster } from './Poster';
 export function Viewuser() {
   const history = useHistory();
   const [user,setuser]= useState({});
-    const {id} = useParams();
+    const id = useParams();
     const getuser=()=>{
     //
     fetch(`${APIuser}/User/${id}`)
