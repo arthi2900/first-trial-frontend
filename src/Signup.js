@@ -9,7 +9,7 @@ export const userValidationSchema=yup.object({
 password: yup.string().required("why not fill this password?"),
 
 })
-export function Adduser() {
+export function Signup() {
   //const [ teacherlist,setteacherlist]= useState([]);
    const formik=useFormik({
     initialValues:{

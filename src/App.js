@@ -6,7 +6,7 @@ import { Data} from './Data';
 import { Viewposter } from './Viewposter';
 import { Editposter } from './Editposter';
 import {Addposter } from './Addposter';
-import { Adduser } from './Adduser';
+import { Adduser } from './Signup';
 import { Viewuser } from './Viewuser';
 //import {Ourpost } from './Viewuser';
 import { Userdata } from './Userdata';
@@ -28,7 +28,7 @@ function App() {
          <ul>
   <Box sx={{ width:900}}>
       <Button className="menu"><Link to="/Poster">Home  </Link></Button>
-     <Button className="menu"> <Link to="/User/Adduser">signup </Link></Button>
+     <Button className="menu"> <Link to="/User/Signup">signup </Link></Button>
      <Button className="menu"><Link to="/Poster/addposter">Add Poster  </Link></Button>
      <Button className="menu"> <Link to="/User/:id">Profile </Link></Button>
      <Button className="menu"> <Link to="/login">Login </Link></Button>
@@ -39,7 +39,7 @@ function App() {
 
         <Route path=" /User/editposter/:id"><Editposterbyuser/></Route>
         <Route path="/User/edit/:id"><Edituser /></Route>
-    <Route path="/User/Adduser"><Adduser/></Route>
+    <Route path="/User/Signup"><Signup/></Route>
     <Route path="/User/:id"><Viewuser /></Route>
     <Route path="/User"><Userdata/></Route>
     <Route path="/Poster/edit/:pid"><Editposter /></Route>
