@@ -1,7 +1,7 @@
 import './App.css';
 import { Link, Switch, Route} from "react-router-dom";
 import { useState} from 'react';
-import { Userlogin } from './Userlogin';
+import { Login } from './Userlogin';
 import { Data} from './Data';
 import { Viewposter } from './Viewposter';
 import { Editposter } from './Editposter';
@@ -47,7 +47,7 @@ function App() {
   <Route path="/Poster/:pid">< Viewposter /></Route>
         <Route path="/Poster"><Data/></Route>
        
-               <Route path="/login"><Userlogin/></Route>
+               <Route path="/Login"><Login/></Route>
       </Switch>
                                
           </div>

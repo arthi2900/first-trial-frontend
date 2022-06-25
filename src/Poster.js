@@ -7,22 +7,13 @@ import Avatar from '@mui/material/Avatar';
 import { red } from '@mui/material/colors';
 import IconButton from '@mui/material/IconButton';
 import Badge from '@mui/material/Badge';
-import Button from '@mui/material/Button';
-import TextField from '@mui/material/TextField';
 import { useState } from 'react';
-import {useFormik} from "formik";
-import { APIuser } from './API';
-import { APIposter} from './API';
-import { useEffect,useParams} from 'react';
-import * as yup from "yup";
-
 import { CardActionArea } from '@mui/material';
 import CardContent from '@mui/material/CardContent';
 export function Poster({ name,image,logo,imagename,pid}) {
   const[ userlist,setuserlist]= useState([]);
    const history = useHistory();
- 
- return (
+  return (
     <div >
        <Card sx={{ maxWidth: 280,margin:'2%'}}>
          <Card>

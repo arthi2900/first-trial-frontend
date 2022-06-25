@@ -6,14 +6,14 @@ import Button from '@mui/material/Button';
 import *as yup from "yup";
 export const userValidationSchema=yup.object({
  name: yup.string().required("why not fill this name???"),
- logo: yup.string().required("why not fill this logo?"),
-about:yup.string().required("why not fill this about???")
+password: yup.string().required("why not fill this password?"),
+
 })
 export function Adduser() {
   //const [ teacherlist,setteacherlist]= useState([]);
    const formik=useFormik({
     initialValues:{
-     name:" ",logo:" ",about:" ",
+     name:" ",password:"",
     },
     validationSchema:userValidationSchema, 
      onSubmit:(addte)=>{
@@ -31,7 +31,7 @@ export function Adduser() {
             "content-Type":"application/json"
           }
         })
-         .then(()=> history.push('/User'));
+         .then(()=> history.push('/Login'));
 
     
        };
@@ -45,16 +45,13 @@ export function Adduser() {
      onChange={formik.handleChange} 
     value={formik.values.name}
         />{formik.touched.name && formik.errors.name ?formik.errors.name :" "}
-    <TextField fullWidth label="logo" id="logo" 
-    name="logo" type="text" 
+    <TextField fullWidth label="password" id="password" 
+    name="password" type="password" 
       onChange={formik.handleChange} 
-      onBlur={formik.handleChange} value={formik.values.logo}/>
-      {formik.touched.logo && formik.errors.logo ?formik.errors.logo :" "}
-    <TextField fullWidth label="about" id="about" name="about" type="text" 
-      onChange={formik.handleChange} onBlur={formik.handleChange} />
-      {formik.touched.about && formik.errors.about ?formik.errors.about :" "}
-
-    <Button fullwidth type="submit" >add poster</Button>
+      onBlur={formik.handleChange} value={formik.values.password}/>
+      {formik.touched.password && formik.errors.password ?formik.errors.password :" "}
+   
+    <Button fullwidth type="submit" >signup</Button>
     </form>
   </div>;
 }
