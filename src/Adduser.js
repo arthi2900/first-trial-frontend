@@ -28,7 +28,8 @@ export function Adduser() {
           method:"POST",
           body:JSON.stringify(addte),
           headers:{
-            "content-Type":"application/json"
+            "content-Type":"application/json",
+            "Access-Control-Allow-Origin": "*"
           }
         })
          .then(()=> history.push('/Login'));

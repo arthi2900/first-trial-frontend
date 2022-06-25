@@ -28,7 +28,8 @@ export function Login() {
     method:"POST",
     body:JSON.stringify(addst),
     headers:{
-      "content-Type":"application/json"
+      "content-Type":"application/json",
+      "Access-Control-Allow-Origin": "*"
     },
     }).then(()=> history.push('/User/:id'));}
 
