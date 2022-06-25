@@ -1,0 +1,77 @@
+import "./App.css";
+import { useState } from "react";
+const studentdatalist= [
+  {  sname:"arthi",
+      degree:"BCA",
+      year:"1",
+      section:"A",
+      batchyear:"2020-2023"
+    },{
+      sname:"anandhi",
+      degree:"BCA",
+      year:"1",
+      section:"B",
+      batchyear:"2020-2023"
+    }
+];
+export default function App() {
+ 
+   const [ studentlist,setstudentlist]= useState(studentdatalist);
+const [sname,setSname]= useState("");
+const [degree,setDegree]= useState("");
+const [year,setYear]= useState("");
+const [section,setSection]= useState("");
+const [batchyear,setBatchyear]= useState("");
+return (
+    <div className="App">
+       <div className="add-movie-form">
+      <input type="text"
+       placeholder="Name"
+       onChange={(event)=>setSname(event.target.value)}/>
+      <input type="text" placeholder="poster"
+       onChange={(event)=>setDegree(event.target.value)} />
+      <input type="text" placeholder="rating" 
+       onChange={(event)=>setYear(event.target.value)}/>
+      <input type="text" placeholder="summary" 
+      onChange={(event)=>setSection(event.target.value)}/>
+      <input type="text" placeholder="summary" 
+      onChange={(event)=>setBatchyear(event.target.value)}/>
+      <button onClick={()=>{
+        const newMovie={
+          sname:sname,
+          degree:degree,
+        year:year,
+        section:section,
+        batchyear:batchyear
+        };
+        setstudentlist([...studentlist,newMovie])
+        }}>add movie</button>
+      </div>
+            <div className="movie-list">
+            {studentlist.map((art1) => (
+        <Student  key={art1.index}
+          sname={art1.sname}      degree={art1.degree}
+          year={art1.year}      section={art1.section}
+          batchyear={art1.batchyear}
+        />
+      ))}
+      </div>
+           
+    </div>
+  );
+}
+function Student({sname,degree,year,section,batchyear}) {
+   return (
+    <div className="movie-container">
+              <div className="head">
+          <h5 className="movie-name">{sname}</h5>
+          <h5 className="movie-name">{degree}</h5>
+          <h5 className="movie-name">{year}</h5>
+         <p  className="movie-rateing">⭐{batchyear}</p>
+         </div>
+           <h5 className="movie-summary">{section}</h5>
+               </div>
+  );
+}
+
+

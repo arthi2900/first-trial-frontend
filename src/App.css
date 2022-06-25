@@ -1,0 +1,50 @@
+.App {
+  text-align: center;
+  background-color: #282c34;
+  min-height: 100vh;
+     color: white;
+     font-size: calc(10px + 2vmin);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.logindataalign {
+  background-color: #282c34;
+  display: flex;
+ }
+.teacher-list{
+  margin-top:3%;
+  display: flex;
+flex-wrap: wrap;
+flex-direction: row;
+align-items: center;
+justify-items: center;
+gap:5%;
+}
+.posterlist{
+  margin-top:3%;
+  display: flex;
+flex-wrap: wrap;
+flex-direction: row;
+align-items: center;
+justify-items: center;
+gap:5%;
+}
+.text1{
+  color:red;
+}
+.menu{
+   font-size: calc(10px + 2vmin)
+}
